@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>传智播客论坛_首页</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+	<link rel="stylesheet" type="text/css" href="<?php echo DIR_PUBLIC;?>/css/public.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo DIR_PUBLIC;?>/css/index.css" />
+	<style type="text/css"></style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<div class="header_wrap">
+		<div id="header" class="auto">
+			<div class="logo">itcast</div>
+			<div class="nav">
+				<a class="hover">首页</a>
+				<a href="/model/list_father.php">列表</a>
+			</div>
+			<div class="serarch">
+				<form action="/model/list_son.php" method="GET">
+					<input class="keyword" type="text" name="keyword" placeholder="搜索其实很简单" />
+					<input class="submit" type="submit" value="" />
+				</form>
+			</div>
+			<div class="login">
+			<?php
+				if(isset($_SESSION['userInfo'])){
+					echo '欢迎您！',$_SESSION['userInfo']['user_name'],'&nbsp;';
+				}else{
+					echo '<a href="/model/login.php">登录</a>&nbsp;';
+				    echo '<a href="/model/register.php">注册</a>&nbsp;';
+				}
+			?>
+				<a href="/model/logout.php">注销</a>
+				<a href="/model/upload_image.php">上传头像</a>
+			</div>
+		</div>
+	</div>
+	<div style="margin-top:55px;"></div>
+	<div id="hot" class="auto">
+		<div class="title">学院消息</div>
+		<ul class="newslist">
+			<!-- 20条 -->
+			<li><a href="#">[PHP培训]</a> <a href="#">PHP66期基础班：微笑传递温暖</a></li>
+			<li><a href="#">[Java培训]</a> <a href="#">2015年最后一班高薪直通车启动</a></li>
+			<li><a href="#">[Android培训]</a> <a href="#">6期两个男生也公主抱？这画面..</a></li>
+			<li><a href="#">[网页培训]</a> <a href="#">燃烧吧青春！火热上线—网页22期</a></li>
+			<li><a href="#">[网络营销培训]</a> <a href="#">网络营销学院，3月强势进驻广州</a></li>
+			<li><a href="#">[Android培训]</a> <a href="#">安卓5期就业班热闹开班典礼</a></li>
+			<li><a href="#">[PHP培训]</a> <a href="#">探知广州入冬失败的原因—PHP15期</a></li>
+			<li><a href="#">[网页培训]</a> <a href="#">颜值爆表的网页班开学啦，女神在这</a></li>
+			<li><a href="#">[PHP培训]</a> <a href="#">PHP66期基础班：微笑传递温暖</a></li>
+			<li><a href="#">[Java培训]</a> <a href="#">2016年最后一班高薪直通车启动</a></li>
+			<li><a href="#">[Android培训]</a> <a href="#">6期两个男生也公主抱？这画面..</a></li>
+			<li><a href="#">[网页培训]</a> <a href="#">燃烧吧青春！火热上线—网页22期</a></li>
+			<li><a href="#">[网络营销培训]</a> <a href="#">网络营销学院，3月强势进驻广州</a></li>
+			<li><a href="#">[Android培训]</a> <a href="#">安卓5期就业班热闹开班典礼</a></li>
+			<li><a href="#">[PHP培训]</a> <a href="#">探知广州入冬失败的原因—PHP55期</a></li>
+			<li><a href="#">[网页培训]</a> <a href="#">颜值爆表的网页班开学啦，女神在这</a></li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+	<div class="box auto">
+		<div class="title">
+			国际足球
+		</div>
+		<div class="classList">
+			<div style="padding:10px 0;">暂无子版块...</div>
+		</div>
+	</div>
+	<div class="box auto">
+		<div class="title">
+			CBA
+		</div>
+		<div class="classList">
+			<div style="padding:10px 0;">暂无子版块...</div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+	<div class="box auto">
+		<div class="title">
+			NBA
+		</div>
+		<div class="classList">
+			<div class="childBox new">
+				<h2><a href="#">A队</a> <span>(今日38)</span></h2>
+				帖子：1939539<br />
+			</div>
+			<div class="childBox old">
+				<h2><a href="#">B队</a> <span>(今日38)</span></h2>
+				帖子：1939539<br />
+			</div>
+			<div class="childBox lock">
+				<h2><a href="#">C队</a> <span>(今日38)</span></h2>
+				帖子：1939539<br />
+			</div>
+			<div class="childBox new">
+				<h2><a href="#">D队</a> <span>(今日38)</span></h2>
+				帖子：1939539<br />
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+	<div id="footer" class="auto">
+		<div class="bottom">
+			<a>传智播客</a>
+		</div>
+		<div class="copyright">Powered by itcast ©2016 itcast.cn</div>
+	</div>
+</body>
+</html>
